@@ -38,3 +38,7 @@ Route::get('create-pdf', function () {
     return $pdf->stream();
 });
 ```
+
+You can see the samples of
+1. [Old Laravel Code](./generated-pdf/old-laravel-code.pdf). It seems perfect but it will be ruined when when there is more text like ![this image](./generated-pdf/indentation-problem.jpg)
+2. [New PHP Code](./generated-pdf/new-code.pdf)
