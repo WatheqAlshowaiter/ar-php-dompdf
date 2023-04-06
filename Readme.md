@@ -25,16 +25,16 @@ These problems above was not a problem in the previous Laravel code. I want to s
 2. inside [this line](https://github.com/dompdf/dompdf/blob/master/src/Renderer/Text.php#L74) in the dompdf package we have added.
 
 ```php
-       if ( ! class_exists( 'I18N_Arabic' ) ){
-            $Arabic = new Arabic();
-            $text = $Arabic->utf8Glyphs($text);
-        }
+if ( ! class_exists( 'I18N_Arabic' ) ){
+    $Arabic = new Arabic();
+    $text = $Arabic->utf8Glyphs($text);
+}
 ```
 
 3. use the package
 ```php
 Route::get('create-pdf', function () {
-$pdf = PDF::loadView('sample'); //sample.blade.php = sample.html in this project
-return $pdf->stream();
+    $pdf = PDF::loadView('sample'); //sample.blade.php = sample.html in this project
+    return $pdf->stream();
 });
 ```
