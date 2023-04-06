@@ -1,0 +1,6 @@
+{
+    "require": {
+        "khaled.alshamaa/ar-php": "^6.3",
+        "dompdf/dompdf": "^2.0"
+    }
+}
