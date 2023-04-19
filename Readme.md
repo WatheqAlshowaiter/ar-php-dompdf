@@ -1,24 +1,11 @@
 # Ar-PHP with Dompdf
 
-## Run this project
+## Run this php project
 
 1. install packages `composer install`.
 2. serve the project. If you are on Mac you can use `php -S localhost:8080`;
 
-## What this project solve?
-
-Now, you can use Arabic language without unneeded indentation. see [this issue for more info](https://github.com/khaled-alshamaa/ar-php/issues/59#issue-1561170023).
-
-## What I want from this project to solve?
-
-Yes indentation was solved, but I have 2 problems now:
-
-1. No background image was loaded.
-2. Can not load My Custom font.
-
-These problems above was not a problem in the previous Laravel code. I want to solve all three problems.
-
-### My previous Laravel Code with only the first problem (indentation)
+### My previous Laravel code with the indentation problem
 
 1. download `barryvdh/laravel-dompdf` which is a wrapper around dompdf/dompdf" and download `khaled.alshamaa/ar-php`.
 
@@ -38,10 +25,3 @@ Route::get('create-pdf', function () {
     return $pdf->stream();
 });
 ```
-
-You can see the samples of
-1. [Old Laravel Code](./generated-pdf/old-laravel-code.pdf). It seems perfect but it will be ruined when when there is more text like ![this image](./generated-pdf/indentation-problem.jpg)
-2. [New PHP Code](./generated-pdf/new-code.pdf)
-
-
-You can follow the descusstion to solve this problem [here](https://github.com/khaled-alshamaa/ar-php/issues/59).
