@@ -8,6 +8,7 @@ use Dompdf\Options;
 
 $options = new Options();
 $options->set('defaultFont', 'DejaVu Sans');
+$options->set('isRemoteEnabled', true);
 
 $dompdf = new Dompdf($options);
 $arabic = new \ArPHP\I18N\Arabic();
@@ -23,7 +24,7 @@ $reportHtml = "
     <style>
         @font-face {
             font-family: 'eazycare';
-            src: url(./assets/cocon-next-arabic.ttf);
+            src: url(/Users/watheq/Sites/htdocs/ar-dom-pdf/assets/cocon-next-arabic.ttf);
             font-weight: normal;
             font-style: normal;
             font-variant: normal;
@@ -95,14 +96,14 @@ $reportHtml = "
         }
     </style>
 </head>
-<body dir='rtl' style='background: url(assets/background.jpg) ;background-size: 100% 100%;'>
+<body dir='rtl' style='background: url(/Users/watheq/Sites/htdocs/ar-dom-pdf/assets/background.jpg) ;background-size: 100% 100%;'>
 <div class='header'>
     <div class='invoice-name'>
         <p>الفاتورة </p>
         <span>رقم الطلب: 9323243</span>
     </div>
     <div class='logo'>
-        <img src='./assets/vertical@4x-8.png' width='140'>
+        <img src='/Users/watheq/Sites/htdocs/ar-dom-pdf/assets/vertical@4x-8.png' width='140'>
     </div>
 </div>
 <div class='body'>
